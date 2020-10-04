@@ -20,6 +20,9 @@ Rest Service can run on other server than OpenHAB server
 ## Configuration for OpenHAB to visualize electricity meter data
 openhab config files to visualize electricity meter included in project
 
+## Used "Optokopf"
+IR Schreib/Lesekopf USB (Optokopf) https://shop.weidmann-elektronik.de/index.php?page=product&info=24
+
 ## Prerequisites
 1. Install OpenHab on Linux Server A e.g. via docker-compose.yml -> https://github.com/openhab/openhab-docker
 >* Install HTTP Binding (http://ServerA:8080/paperui/index.html#/extensions?tab=binding)
@@ -39,8 +42,8 @@ openhab config files to visualize electricity meter included in project
 
 ## Java
 Following parameters are relevant
--Djava.library.path=/usr/lib/jni
--Dgnu.io.rxtx.SerialPorts=/dev/ttyUSB0
+>* -Djava.library.path=/usr/lib/jni
+>* -Dgnu.io.rxtx.SerialPorts=/dev/ttyUSB0
 
 ## Related links
 1. General: https://www.heise.de/select/ct/2018/8/1523221532486836
