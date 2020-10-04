@@ -2,17 +2,17 @@
 SpringBoot REST Service to provide SML electricity meter reading via usb optical head connection
 
 e.g. http://localhost:8080/energy
-{
-	"appliedMethod": "I-INFO",
-	"timestamp": "2020-10-03T15:19:17Z",
-	"v_1_8_0": 2424.3247,
-	"v_1_8_1": 2424.3247,
-	"v_1_8_2": 0.0,
-	"v_2_8_0": null,
-	"power": 2352.0,
-	"serverID": "09 01 49 53 4B 00 04 4F 3E 5D",
-	"secindex": 17814034
-}
+>*{
+>*	"appliedMethod": "I-INFO",
+>*	"timestamp": "2020-10-03T15:19:17Z",
+>*	"v_1_8_0": 2424.3247,
+>*	"v_1_8_1": 2424.3247,
+>*	"v_1_8_2": 0.0,
+>*	"v_2_8_0": null,
+>*	"power": 2352.0,
+>*	"serverID": "09 01 ... 3E 5D",
+>*	"secindex": 17...034
+>*}
 
 ## Rest Service for use with OpenHAB
 Rest Service can run on other server than OpenHAB server
