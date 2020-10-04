@@ -21,17 +21,27 @@ Rest Service can run on other server than OpenHAB server
 openhab config files to visualize electricity meter included in project
 
 ## Prerequisites
-* Install OpenHab on Linux Server A e.g. via docker-compose.yml -> https://github.com/openhab/openhab-docker
-** Config files will be below /var/lib/docker/volumes/openhab_openhab_config
-* Pepare Linux Server B
-** sudo apt-get install librxtx-java
-** sudo adduser <yourUserName> dialout
-** sudo adduser <yourUserName> tty
+1. Install OpenHab on Linux Server A e.g. via docker-compose.yml -> https://github.com/openhab/openhab-docker
+>* Install HTTP Binding (http://ServerA:8080/paperui/index.html#/extensions?tab=binding)
+>* Install RRD4j Persistence (http://ServerA:8080/paperui/index.html#/extensions?tab=persistence)
+>* Config files will be placed below /var/lib/docker/volumes/openhab_openhab_config
+>* Summery page will be availible on http://ServerA:8080/basicui/app
+2. Pepare Linux Server B to serve the REST Service
+>* sudo apt-get install librxtx-java
+>* sudo adduser <yourUserName> dialout
+>* sudo adduser <yourUserName> tty
+3. Build REST Service (tested with java11)
+>* Activate separately both pom.xml artifacts (mvn validate) to transfer both jar files to local maven repo 
+>* maven based SpringBoot Service (mvn clean package)
+4. Transfer build jar file to Server B and start REST Service
+>* Start REST Service via "java -jar energy_only-1.0-SNAPSHOT.jar" 
+>* Crontab restart scenario "@reboot /usr/bin/java -jar /home/USERNAME/electricity_meter_rest_service-1.0-SNAPSHOT.jar > /dev/null 2>&1"
 
 ## Java
 Following parameters are relevant
 -Djava.library.path=/usr/lib/jni
 -Dgnu.io.rxtx.SerialPorts=/dev/ttyUSB0
+
 
 
 ## Related links
