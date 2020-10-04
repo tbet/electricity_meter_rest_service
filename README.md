@@ -51,5 +51,5 @@ Following parameters are relevant
 >* Behavior changed in version 1.1.x so i used the older 1.0.1 version
 3. Library jrxtx: https://github.com/openmuc/jrxtx
 >* Compiled jar with native gnu.io lib included
-
+4. Other Java Project where both components is on one server: https://github.com/jblu48317/SMLToJSON
 
