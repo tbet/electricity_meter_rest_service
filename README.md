@@ -42,9 +42,11 @@ Following parameters are relevant
 -Djava.library.path=/usr/lib/jni
 -Dgnu.io.rxtx.SerialPorts=/dev/ttyUSB0
 
-
-
 ## Related links
-https://www.heise.de/select/ct/2018/8/1523221532486836
+1. General: https://www.heise.de/select/ct/2018/8/1523221532486836
+2. Library jSML: https://www.openmuc.org/sml/download/
+>* Behavior changed in version 1.1.x so i used the older 1.0.1 version
+3. Library jrxtx: https://github.com/openmuc/jrxtx
+>* Compiled jar with native gnu.io lib included
 
 
